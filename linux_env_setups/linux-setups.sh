@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-# set -o errexit -o pipefail
+
 # Linux Setups
 # Author noernova
 # Date: Jul 25, 2021
@@ -46,7 +46,7 @@ echo ""
 
 # SETUP Temp folder
 SETUPDIR=$(pwd)
-mkdir $SETUPDIR/temp
+[ ! -d $SETUPDIR/temp ] && mkdir $SETUPDIR/temp
 SETUPTEMP=$SETUPDIR/temp
 
 # ------------------------------------------------------------------------------------
@@ -243,16 +243,19 @@ echo ""
 cp $SETUPDIR/dotfiles/.bash_aliases $HOME/
 cp $SETUPDIR/dotfiles/.p10k.zsh $HOME/
 
-# 6.2. fonts
+# 6.2 Fonts directory
+FONTSDIR=/usr/share/fonts/truetype
+
+# fonts
 echo "### fonts copying ... ####"
 
-# 6.2.1. MesloLGS
-sudo mkdir /usr/share/fonts/truetype/MesloLGS
+# 6.2.1 MesloLGS
+[ ! -d $FONTSDIR/MesloLGS ] && sudo mkdir $FONTSDIR/MesloLGS
 sudo cp $SETUPDIR/fonts/MesloLGS/*.ttf /usr/share/fonts/truetype/MesloLGS
 
-# 6.2.2. Cascadia-Code
-sudo mkdir /usr/share/fonts/truetype/CascadiaCode
-sudo cp $SETUPDIR/fonts/CascadiaCode/*.ttf /usr/share/fonts/truetype/CascadiaCode
+# 6.2.2 Cascadia-Code
+[ ! -d $FONTSDIR/CascadiaCode ] && sudo mkdir $FONTSDIR/CascadiaCode
+sudo cp $SETUPDIR/fonts/CascadiaCode/*.ttf $FONTSDIR/CascadiaCode
 
 # ----------------------------------------------------------------------------------------------
 
@@ -280,3 +283,4 @@ case $yn in
   * ) echo "finished setups, happy hacking... ;)"; exit;;                                                        
 esac     
 
+# ----------------------------------------------------------------------------------------------
