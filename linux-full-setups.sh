@@ -27,7 +27,13 @@ set -e
 #     5.2. fonts
 #        5.2.1. MesloLGS
 #        5.2.2. Cascadia-Code
-#   6. Finished
+#   6. Text Editor
+#     6.1. VSCode
+#     6.2. Sublime-Text
+#   7. Web Browser
+#     7.1. Google-Chrome
+#     7.2. Brave
+#   8. Finished
 
 # ====================================================================================
 
@@ -68,7 +74,19 @@ cd $SETUPDIR
 #     5.2. fonts
 ./fonts.sh
 
-#   6. Finished and Clean temps
+#   6. Text Editors
+#     6.1. VSCode
+./vscode.sh
+#     6.2. Sublime-Text
+./sublime_text.sh
+
+#   7. Web Browser
+#     7.1. Google-Chrome
+./google_chrome.sh
+#     7.2. Brave
+./brave.sh
+
+#   8. Finished and Clean temps
 rm -rf $SETUPTEMP
 SETUPTEMP=
 SETUPDIR=
