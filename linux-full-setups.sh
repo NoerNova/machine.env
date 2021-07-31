@@ -34,6 +34,7 @@ set -e
 #     7.1. Google-Chrome
 #     7.2. Brave
 #   8. Finished
+#   9. Others
 
 # ====================================================================================
 
@@ -94,3 +95,6 @@ SETUPDIR=
 echo "Finish setups, happy hacking..."
 
 # -------------------------------------------------------------------------------------
+
+## sudo apt install fonts-thai-tlwg
+## sudo apt install guake

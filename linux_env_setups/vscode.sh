@@ -35,7 +35,7 @@ sudo apt install curl apt-transport-https --yes
 cd $SETUPTEMP
 curl -o vscode.deb -L 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
 
-sudo apt install vscode.deb --yes
+sudo dpkg -i vscode.deb
 
 cd $SETUPDIR
 
