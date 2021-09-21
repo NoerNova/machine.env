@@ -59,6 +59,7 @@ echo ""
 echo "### Colorls installing ... ####"
 echo ""
 
+sudo apt install bc build-essential --yes
 sudo gem install colorls
 
 # copy dotfiles
