@@ -96,5 +96,15 @@ echo "Finish setups, happy hacking..."
 
 # -------------------------------------------------------------------------------------
 
+# // thai fonts for kali, (Require)
 ## sudo apt install fonts-thai-tlwg
+
+# // drop down terminal
 ## sudo apt install guake
+
+# // command correction
+## sudo apt install thefuck
+
+# // howdoi
+# sudo apt install howdoi
+# pip install howdoi
