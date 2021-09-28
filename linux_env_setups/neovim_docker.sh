@@ -63,7 +63,7 @@ echo ""
 
 # appImage not work, require fuselib
 # so let self build and install
-cd $SETUPDIR
+cd $SETUPTEMP
 git clone https://github.com/neovim/neovim
 cd neovim
 sudo make CMAKE_BUILD_TYPE=Release install
@@ -77,9 +77,13 @@ echo ""
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
+# back to root parent
+cd $SETUPDIR/../
 
-cd $SETUPDIR
-mkdir ~/.config
+# ~/.config folder
+[ ! -d ~/.config ] && mkdir ~/.config
+
+# copy nvim files config directory to ~/.config
 cp -r nvim ~/.config/
 
 nvim +PlugInstall +qa
