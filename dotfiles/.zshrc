@@ -60,7 +60,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # <<< flutter >>>
-export PATH="$HOME/.flutter/flutter/bin:$PATH"
+# export PATH="$HOME/.flutter/flutter/bin:$PATH"
 # flutter
 
 
@@ -79,10 +79,10 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 source $(dirname $(gem which colorls))/tab_complete.sh
 
 # Projectman
-source $HOME/.projectman
+# source $HOME/.projectman
 
 # thefuck
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 
 # bat
 # theme
