@@ -44,5 +44,51 @@ export NVM_DIR="$HOME/.nvm"
 
 source ~/.bash_aliases
 
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# <<< flutter >>>
+export PATH="$HOME/.flutter/flutter/bin:$PATH"
+# flutter
+
+
+# >>> mysql <<<
+export PATH="/usr/local/mysql/bin:$PATH"
+
+# >>> Android SDK <<<
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+
 # colorls
 source $(dirname $(gem which colorls))/tab_complete.sh
+
+# Projectman
+source $HOME/.projectman
+
+# thefuck
+eval $(thefuck --alias)
+
+# bat
+# theme
+export BAT_THEME="Nord"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

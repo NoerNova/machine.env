@@ -1,8 +1,16 @@
 alias cls="clear"
 alias py="python3"
 alias py2="python"
-alias isimulator="open -a Simulator"
+alias iosemulator="open -a Simulator"
 alias ll="colorls -l --sd"
+alias nvi="nvim"
+alias nvimt="nvim +NERDTree"
+alias nvit="nvim +NERDTree"
+alias nvimtree="nvim +NERDTree"
+alias yt-dl="youtube-dl"
+alias h='function hdi(){ howdoi $* -c -n 5; }; hdi'
+alias pjm="bat ~/.projectman"
+alias androidemu="emulator -avd Pixel4 -netspeed full -netdelay none &"
 
 pgsql() {
     if [ -n "$1" ]
