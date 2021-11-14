@@ -85,6 +85,7 @@ rm -rf $SETUPTEMP
 SETUPTEMP=
 SETUPDIR=
 
-echo "Finish setups, happy hacking..."
+echo " "
+echo "Setups done, happy hacking..."
 
 # -------------------------------------------------------------------------------------

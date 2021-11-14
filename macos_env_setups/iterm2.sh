@@ -47,3 +47,6 @@ cp $SETUPDIR/../dotfiles/.zshrc $HOME/.zshrc
 
 [ -f $HOME/.zpreztorc ] && rm -r $HOME/.zpreztorc
 cp $SETUPDIR/../dotfiles/.zpreztorc $HOME/.zpreztorc
+
+# iterm colors
+cp -R $SETUPDIR/../iterm2/colors $HOME/.config/iterm2/

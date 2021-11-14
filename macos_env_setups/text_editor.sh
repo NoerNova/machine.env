@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 # Text_editor setups
 # Author: noernova
@@ -15,7 +14,9 @@ echo "#######################"
 echo ""
 
 # sublime-text
-brew install --cask sublime-text
+[ ! -d /Applications/Sublime\ Text.app ] && brew install --cask sublime-text
 
 # vscode
-brew install --cask visual-studio-code
+[ ! -d /Applications/Visual\ Studio\ Code.app ] && brew install --cask visual-studio-code
+
+echo "Sublime-Text and VSCode are setups."
