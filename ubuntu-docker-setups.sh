@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-# Linux Setups
+# Ubuntu Docker Setups
 # Author noernova
 # Date: Jul 25, 2021
 # Contact noernova.com

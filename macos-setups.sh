@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-# Linux Setups
+# MacOS Setups
 # Author noernova
 # Date: Nov 14, 2021
 # Contact noernova.com
