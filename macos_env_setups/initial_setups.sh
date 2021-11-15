@@ -32,7 +32,7 @@ fi
 # echo 'PATH="/opt/homebrew/bin:$PATH"' >> ~/.zshrc
 # source ~/.zshrc
 
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/kaungtip/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 
