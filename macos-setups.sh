@@ -9,31 +9,34 @@ set -e
 # ===================================================================================
 
 # List of Content
-#   1. Terminal setups
-#     1.1. Zsh
-#     1.2. Prezto (https://github.com/sorin-ionescu/prezto)
-#     1.3. Colorls (https://github.com/athityakumar/colorls)
-#   2. nvm & nodejs
-#     2.1. nvm
-#     2.2. nodejs
-#   3. nvim
-#     3.1. tree-sitter
-#     3.2. luajit
-#     3.3. neovim
-#     3.4. vimplug
-#   4. Other files
-#     4.1. dotfiles
-#     4.2. fonts
-#        4.2.1. MesloLGS
-#        4.2.2. Cascadia-Code
-#   5. Text Editor
-#     5.1. VSCode
-#     5.2. Sublime-Text
-#   6. Web Browser
-#     6.1. Google-Chrome
-#     6.2. Brave
-#   7. Finished
-#   8. Others
+#   1. Initial setups
+#   2. Terminal setups
+#     iTerm
+#    2.1. Zsh
+#    2.2. Prezto (https://github.com/sorin-ionescu/prezto)
+#    2.3. Colorls (https://github.com/athityakumar/colorls)
+#   3. nvm & nodejs
+#     3.1. nvm
+#     3.2. nodejs
+#   4. nvim
+#     4.1. tree-sitter
+#     4.2. luajit
+#     4.3. neovim
+#     4.4. vimplug
+#   5. Other files
+#     5.1. dotfiles
+#     5.2. fonts
+#        5.2.1. MesloLGS
+#        5.2.2. Cascadia-Code
+#   6. Text Editor
+#     6.1. VSCode
+#     6.2. Sublime-Text
+#   7. Web Browser
+#     7.1. Google-Chrome
+#     7.2. Brave
+#     7.3. Firefox
+#   8. Finished
+#   9. Others
 
 # ====================================================================================
 
@@ -84,6 +87,11 @@ cd $SETUPDIR
 rm -rf $SETUPTEMP
 SETUPTEMP=
 SETUPDIR=
+
+#   9. Others
+#     9.1. batscat
+brew install bats
+
 
 echo " "
 echo "Setups done, happy hacking..."
