@@ -4,7 +4,7 @@
 ## Just another machine environment setups
 
 <!-- TABLE OF CONTENTS -->
-<details>
+<details open>
   <summary>Table of Contents</summary>
   <ol>
     <li>
@@ -30,6 +30,7 @@
   </ol>
 </details>
 
+--
 <!-- Linux -->
 ### Linux tools and environment
 
@@ -71,10 +72,10 @@
 
 
 ### Linux Setups
-1. clone this repo ``` git clone https://github.com/NoerNova/machine.env.git```
-2. Navigate to folder ```cd machine.env```
-3. ```chmod +x linux-full-setups.sh```
-4. ```sh linux-full-setups.sh``` or ```./linux-full-setups.sh```
+1. clone this repo ```sh git clone https://github.com/NoerNova/machine.env.git```
+2. Navigate to folder ```sh cd machine.env```
+3. ```sh chmod +x linux-full-setups.sh```
+4. ```sh linux-full-setups.sh``` or ```sh ./linux-full-setups.sh```
 
 --
 
@@ -105,10 +106,10 @@
 
 
 ### Docker-Ubuntu Setups
-1. clone this repo ``` git clone https://github.com/NoerNova/machine.env.git```
-2. Navigate to folder ```cd machine.env```
-3. ```chmod +x ubuntu-docker-setups.sh```
-4. ```sh ubuntu-docker-setups.sh``` or ```./ubuntu-docker-setups.sh```
+1. clone this repo ```sh git clone https://github.com/NoerNova/machine.env.git```
+2. Navigate to folder ```sh cd machine.env```
+3. ```sh chmod +x ubuntu-docker-setups.sh```
+4. ```sh ubuntu-docker-setups.sh``` or ```sh ./ubuntu-docker-setups.sh```
 
 --
 <!-- MacOS -->
@@ -153,10 +154,10 @@
 
 
 ### MacOS Setups
-1. clone this repo ``` git clone https://github.com/NoerNova/machine.env.git```
-2. Navigate to folder ```cd machine.env```
-3. ```chmod +x macos-setups.sh```
-4. ```sh macos-setups.sh``` or ```./macos-setups.sh```
+1. clone this repo ```sh git clone https://github.com/NoerNova/machine.env.git```
+2. Navigate to folder ```sh cd machine.env```
+3. ```sh chmod +x macos-setups.sh```
+4. ```sh macos-setups.sh``` or ```sh ./macos-setups.sh```
 
 ## Credit
 #### [More for mac setups for developement](https://sourabhbajaj.com/mac-setup/Xcode/) by [Sourabh Bajaj](https://github.com/sb2nov)
