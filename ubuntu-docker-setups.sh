@@ -68,6 +68,10 @@ rm -rf $SETUPTEMP
 SETUPTEMP=
 SETUPDIR=
 
+#   6. Others
+#     6.1. batcat
+sudo apt install bat
+
 echo "Finish setups, happy hacking..."
 
 # -------------------------------------------------------------------------------------
