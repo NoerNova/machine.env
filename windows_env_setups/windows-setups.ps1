@@ -1,4 +1,26 @@
-$ErrorActionPreference = 'Continue'
+# Windows Setups
+# Author noernova
+# Date: Dec 13, 2021
+# Contact noernova.com
+# Github https://github.com/noernova
+# ===================================================================================
+
+# List of Content
+# 	1. Initial setups
+#   2. Windows Terminal
+#    2.1. PowerShell
+#   3. Scoop
+#   4. Git
+#	5. NeoVim
+#	  5.1. vimplug
+#  	6. Oh My Posh
+# 	7. nvm
+# 	8. Terminal Icons
+# 	9. Directory Jumber
+# 	10. PSReadLine Auto Completion
+# 	11. Fuzzy finder
+
+# ====================================================================================
 
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 iwr -useb get.scoop.sh | iex
@@ -10,6 +32,7 @@ winget install -e --id Git.Git
 
 # neovim
 scoop install neovim gcc
+
 # vim-plug
 iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
@@ -18,12 +41,12 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
 cp -R nvim ~\AppData\Local
 
 # copy setup files
-$CFOLDER = '~\.config\powershell'
-if ((Test-Path -Path $CFOLDER) -eq $false) {
+$CONFIG_DIR = '~\.config\powershell'
+if ((Test-Path -Path $CONFIG_DIR) -eq $false) {
 	mkdir ~\.config\powershell
 }
-cp windows_env_setups\config.omp.json $CFOLDER
-cp windows_env_setups\user_profile.ps1 $CFOLDER
+cp config_files\config.omp.json $CONFIG_DIR
+cp config_files\user_profile.ps1 $CONFIG_DIR
 
 # Powershell config file
 $PFOLDER = '~\Documents\PowerShell'
@@ -37,7 +60,8 @@ echo '. $env:USERPROFILE\.config\powershell\user_profile.ps1' >> $PROFILE.Curren
 Install-Module posh-git -Scope CurrentUser -Force
 Install-Module oh-my-posh -Scope CurrentUser -Force
 
-oh-my-posh --init --shell pwsh --config $CFOLDER\config.omp.json | Invoke-Expression
+# load oh-my-posh config
+oh-my-posh --init --shell pwsh --config $CONFIG_DIR\config.omp.json | Invoke-Expression
 
 # nvm
 scoop install nvm

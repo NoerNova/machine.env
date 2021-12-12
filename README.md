@@ -25,10 +25,17 @@
         <li><a href="#macos-setups">MacOS Setups</a></li>
       </ul>
     </li>
+    <li>
+      <a href="#windows-tools-and-environment">Windows tools and environment</a>
+      <ul>
+        <li><a href="#windows-setups">Windows Setups</a></li>
+    </ul>
+    </li>
     <li><a href="#credit">Credit</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
+
 
 ---
 
@@ -94,7 +101,7 @@
 7. Run install script
 ```sh 
   bash linux-full-setups.sh
-``` 
+```
 or 
 ```sh 
   ./linux-full-setups.sh
@@ -144,7 +151,7 @@ or
 7. Run install script
 ```sh 
   bash ubuntu-docker-setups.sh
-``` 
+```
 or 
 ```sh 
   ./ubuntu-docker-setups.sh
@@ -208,18 +215,69 @@ or
 7. Run install script
 ```sh 
   bash macos-setups.sh
-``` 
+```
 or 
 ```sh 
   ./macos-setups.sh
 ```
 
 ---
+<!-- WINDOWS -->
+
+### Windows tools and environment
+
+1. [Scoop](https://scoop.sh/)
+
+2. [Git for Windows](https://gitforwindows.org/)
+
+3. [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab)
+   - [PowerShell](https://www.microsoft.com/en-us/p/powershell/9mz1snwt0n5d?activetab=pivot:overviewtab)
+   - [Oh-My-Posh](https://ohmyposh.dev/)
+   - [Terminal Icons](https://github.com/devblackops/Terminal-Icons)
+   - z [Directory Jumber](https://www.powershellgallery.com/packages/z/1.1.13)
+   - [PSReadLine Auto Completion](https://docs.microsoft.com/en-us/powershell/module/psreadline/?view=powershell-7.2)
+   - [Fuzzy finder](https://github.com/kelleyma49/PSFzf)
+
+4. Neo-Vim
+   * [tree-sitter](https://tree-sitter.github.io/tree-sitter/)
+   * [luajit](https://luajit.org/)
+   * [neovim](https://neovim.io/)
+   * [vimplug](https://github.com/junegunn/vim-plug)
+5. nvm & nodejs
+   * [nvm](https://github.com/nvm-sh/nvm)
+   * [nodejs](https://nodejs.org/en/)
+
+### Windows Setups
+
+1. clone this repo 
+
+```sh 
+  git clone https://github.com/NoerNova/machine.env.git
+```
+
+2. Navigate to folder 
+
+```sh 
+  cd machine.env
+```
+
+3. Run install script with PowerShell (I use Windows Terminal with PowerShell)
+
+```sh 
+ ./windows-full-setups.ps1
+```
+
+---
+
 ## Credit
+
 #### [More for mac setups for developement](https://sourabhbajaj.com/mac-setup/Xcode/) by [Sourabh Bajaj](https://github.com/sb2nov)
 #### [Neovim setups](https://blog.inkdrop.app/how-to-set-up-neovim-0-5-modern-plugins-lsp-treesitter-etc-542c3d9c9887) by [Takuya Matsuyama](https://medium.com/@inkdrop)
 
+##### Mostly dotfiles and inspire setup by [Takuya Matsuyama](https://medium.com/@inkdrop)
+
 <!-- CONTACT -->
+
 ## Contact
 
 NorHsangPha - [noernova.com](noernova.com)
