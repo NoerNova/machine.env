@@ -49,3 +49,6 @@ Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -Skip
 # Fuzzy finder
 scoop install fzf
 Install-Module -Name PSFzf -Scope CurrentUser -Force
+
+# echo finished
+echo "Finished > checkout omp cool themes https://ohmyposh.dev/docs/themes"

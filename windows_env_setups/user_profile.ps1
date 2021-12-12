@@ -31,3 +31,6 @@ function which ($command) {
   Get-Command -Name $command -ErrorAction SilentlyContinue |
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
+
+# Oh my Posh themes https://ohmyposh.dev/docs/themes
+Set-PoshPrompt bubblesline
