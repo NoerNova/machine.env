@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Continue'
 
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
-# iwr -useb get.scoop.sh | iex
+iwr -useb get.scoop.sh | iex
 
 scoop install curl sudo jq
 
@@ -31,7 +31,7 @@ if ((Test-Path -Path $PFOLDER) -eq $false) {
 	mkdir ~\Documents\PowerShell
 }
 
-echo '$env:USERPROFILE\.config\powershell\user_profile.ps1' >> $PROFILE.CurrentUserCurrentHost
+echo '. $env:USERPROFILE\.config\powershell\user_profile.ps1' >> $PROFILE.CurrentUserCurrentHost
 
 # Oh-My-Posh
 Install-Module posh-git -Scope CurrentUser -Force
