@@ -20,3 +20,6 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
 
 # copy nvim setupfile
 cp -R ..\nvim ~\AppData\Local
+
+# prettier and formatter
+npm i -g eslint_d prettier

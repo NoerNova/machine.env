@@ -77,6 +77,9 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 nvim +PlugInstall +qa
 
+# prettier and formatter
+npm i -g eslint_d prettier
+
 cd $SETUPDIR
 
 # Clean temps

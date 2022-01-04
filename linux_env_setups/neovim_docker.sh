@@ -88,6 +88,9 @@ cp -r nvim ~/.config/
 
 nvim +PlugInstall +qa
 
+# prettier and formatter
+npm i -g eslint_d prettier
+
 # Clean temps
 rm -rf $SETUPTEMP
 SETUPTEMP=
