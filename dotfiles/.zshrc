@@ -82,7 +82,7 @@ source $(dirname $(gem which colorls))/tab_complete.sh
 source $HOME/.projectman
 
 # thefuck
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 
 # bat
 # theme
