@@ -89,6 +89,8 @@ cp -r nvim ~/.config/
 nvim +PlugInstall +qa
 
 # prettier and formatter
+# reload npm
+source ~/.zshrc
 npm i -g eslint_d prettier
 
 # Clean temps

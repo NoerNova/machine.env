@@ -53,6 +53,9 @@ echo ""
 
 nvm install node
 
+# Reload setting
+source ~/.zshrc
+
 cd $SETUPDIR
 
 # Clean temps
