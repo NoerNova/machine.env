@@ -11,6 +11,7 @@ alias yt-dl="youtube-dl"
 alias h='function hdi(){ howdoi $* -c -n 5; }; hdi'
 alias pjm="bat ~/.projectman"
 alias androidemu="emulator -avd Pixel4 -netspeed full -netdelay none &"
+alias batcat="bat"
 
 pgsql() {
     if [ -n "$1" ]
