@@ -69,12 +69,12 @@ cp $SETUPDIR/../dotfiles/.zshrc $HOME/.zshrc
 [ -f $HOME/.zpreztorc ] && rm -r $HOME/.zpreztorc
 cp $SETUPDIR/../dotfiles/.zpreztorc $HOME/.zpreztorc
 
-sudo chsh -s /bin/zsh
+sudo chsh -s $(which zsh)
 
 cd $SETUPDIR
 
 # Clean temps
-rm -rf $SETUPTEMP
+sudo rm -rf $SETUPTEMP
 SETUPTEMP=
 SETUPDIR=
 

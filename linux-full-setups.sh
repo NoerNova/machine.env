@@ -88,7 +88,7 @@ cd $SETUPDIR
 ./brave.sh
 
 #   8. Finished and Clean temps
-rm -rf $SETUPTEMP
+sudo rm -rf $SETUPTEMP
 SETUPTEMP=
 SETUPDIR=
 
@@ -96,6 +96,7 @@ SETUPDIR=
 #     9.1. batcat
 sudo apt install bat
 
+echo ""
 echo "Finish setups, happy hacking..."
 
 # -------------------------------------------------------------------------------------

@@ -45,7 +45,7 @@ sudo apt install brave-browser --yes
 cd $SETUPDIR
 
 # Clean temps
-rm -rf $SETUPTEMP
+sudo rm -rf $SETUPTEMP
 SETUPTEMP=
 SETUPDIR=
 

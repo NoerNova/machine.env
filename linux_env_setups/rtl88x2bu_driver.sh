@@ -66,7 +66,7 @@ sudo modprobe 88x2bu rtw_switch_usb_mode=1
 cd $SETUPDIR
 
 # Clean temps
-rm -rf $SETUPTEMP
+sudo rm -rf $SETUPTEMP
 SETUPTEMP=
 SETUPDIR=
 

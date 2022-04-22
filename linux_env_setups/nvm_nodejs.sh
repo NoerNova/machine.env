@@ -53,13 +53,10 @@ echo ""
 
 nvm install node
 
-# Reload setting
-source ~/.zshrc
-
 cd $SETUPDIR
 
 # Clean temps
-rm -rf $SETUPTEMP
+sudo rm -rf $SETUPTEMP
 SETUPTEMP=
 SETUPDIR=
 

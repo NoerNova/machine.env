@@ -38,7 +38,7 @@ curl -o google-chrome-stable.deb -L "https://dl.google.com/linux/direct/google-c
 sudo dpkg -i google-chrome-stable.deb
 
 # Clean temps
-rm -rf $SETUPTEMP
+sudo rm -rf $SETUPTEMP
 SETUPTEMP=
 SETUPDIR=
 

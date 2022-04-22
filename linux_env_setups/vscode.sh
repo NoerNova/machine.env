@@ -40,7 +40,7 @@ sudo apt install ./vscode.deb
 cd $SETUPDIR
 
 # Clean temps
-rm -rf $SETUPTEMP
+sudo rm -rf $SETUPTEMP
 SETUPTEMP=
 SETUPDIR=
 
