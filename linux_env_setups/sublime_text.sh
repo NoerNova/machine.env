@@ -20,27 +20,20 @@ SETUPDIR=$(pwd)
 [ ! -d $SETUPDIR/temp ] && mkdir $SETUPDIR/temp
 SETUPTEMP=$SETUPDIR/temp
 
-# Update
+cd $SETUPTEMP
+curl -LO https://download.sublimetext.com/sublime_text_build_4126_x64.tar.xz
+
+sudo tar -xvf sublime_text_build_4126_x64.tar.xz -C /opt
+
+sudo ln -s /opt/sublime_text/sublime_text /bin/subl
+
+cd $SETUPDIR
+
+# Clean temps
+sudo rm -rf $SETUPTEMP
+SETUPTEMP=
+SETUPDIR=
+
 echo ""
-echo "### Updating ... ####"
-echo ""
-
-sudo apt update
-
-# Install require modules and packages
-sudo apt install wget apt-transport-https --yes
-
-
-# ----------------------------------------------------------------------------
-
-echo "Sublime text ..."
-
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-
-sudo apt update
-sudo apt install sublime-text
-
 echo "Sublime text, installation completed."
 # ----------------------------------------------------------------------------
