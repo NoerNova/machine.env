@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-# NEOVIM
+# NEOVIM docker - ubuntu image
 # Author: noernova
 # Date: Jul 25, 2021
 # Contact: noernova.com
@@ -29,6 +29,8 @@ sudo apt update
 # Install require modules and packages
 sudo apt install ruby rubygems ruby-dev curl git gzip --yes
 
+# Install more require moduleds by ubuntu running on docker
+sudo apt install gcc build-essential cmake pkg-config libtool libtool-bin gettext --yes
 
 # ----------------------------------------------------------------------------
 
@@ -59,12 +61,12 @@ echo ""
 echo "### NEOVIM installing ... ###"
 echo ""
 
+# appImage not work, require fuselib
+# so let self build and install
 cd $SETUPTEMP
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-sudo chmod u+x nvim.appimage
-sudo mv nvim.appimage /usr/bin/nvim
-
-cp -r $SETUPDIR/../nvim $HOME/.config
+git clone https://github.com/neovim/neovim
+cd neovim
+sudo make CMAKE_BUILD_TYPE=Release install
 
 # vim-plug
 echo ""
@@ -75,17 +77,22 @@ echo ""
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
+# back to root parent
+cd $SETUPDIR/../
+
+# ~/.config folder
+[ ! -d ~/.config ] && mkdir ~/.config
+
+# copy nvim files config directory to ~/.config
+cp -r nvim ~/.config/
+
 nvim +PlugInstall +qa
 
-# prettier and formatter
-# reload npm
-source ~/.zshrc
-npm i -g eslint_d prettier
-
-cd $SETUPDIR
+# exlint and prettier for neovim
+gnome-terminal -- npm i -g eslint_d prettier
 
 # Clean temps
-rm -rf $SETUPTEMP
+sudo rm -rf $SETUPTEMP
 SETUPTEMP=
 SETUPDIR=
 
