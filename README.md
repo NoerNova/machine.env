@@ -8,9 +8,10 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#linux-tools-and-environment">Linux tools and environment</a>
+      <a href="#Linux-tools-and-environment">Linux tools and environment</a>
       <ul>
-        <li><a href="#linux-setups">Linux Setups</a></li>
+        <li><a href="#linux-setups">Debian Setups</a></li>
+        <li><a href="#arch-setups">Arch Linux Setups</a></li>
       </ul>
     </li>
     <li>
@@ -85,7 +86,7 @@
    * [bat](https://github.com/sharkdp/bat)
 
 
-### Linux Setups
+### Debian Setups
 1. clone this repo 
 ```sh 
   git clone https://github.com/NoerNova/machine.env.git
@@ -96,16 +97,39 @@
 ```
 5. chmod
 ```sh 
-  chmod +x linux-full-setups.sh
+  chmod +x debian-full-setups.sh
 ```
 7. Run install script
 ```sh 
-  bash linux-full-setups.sh
+  bash debian-full-setups.sh
 ```
 or 
 ```sh 
-  ./linux-full-setups.sh
+  ./debian-full-setups.sh
 ```
+
+### Arch Linux Setups
+1. clone this repo 
+```sh 
+  git clone https://github.com/NoerNova/machine.env.git
+```
+3. Navigate to folder 
+```sh 
+  cd machine.env
+```
+5. chmod
+```sh 
+  chmod +x arch-full-setups.sh
+```
+7. Run install script
+```sh 
+  bash arch-full-setups.sh
+```
+or 
+```sh 
+  ./arch-full-setups.sh
+```
+
 
 ---
 
