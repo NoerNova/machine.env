@@ -8,10 +8,10 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#Linux-tools-and-environment">Linux tools and environment</a>
+      <a href="#linux-tools-and-environment">Linux tools and environment</a>
       <ul>
-        <li><a href="#linux-setups">Debian Setups</a></li>
-        <li><a href="#arch-setups">Arch Linux Setups</a></li>
+        <li><a href="#debian-setups">Debian Setups</a></li>
+        <li><a href="#arch-linux-setups">Arch Linux Setups</a></li>
       </ul>
     </li>
     <li>
