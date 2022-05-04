@@ -42,7 +42,7 @@ echo ""
 # ------------------------------------------------------------------------------------
 
 # SETUP Temp folder
-SETUPDIR=$(pwd)/linux_env_setups
+SETUPDIR=$(pwd)/debian_env_setups
 [ ! -d $SETUPDIR/temp ] && mkdir $SETUPDIR/temp
 SETUPTEMP=$SETUPDIR/temp
 
@@ -55,7 +55,7 @@ cd $SETUPDIR
 ./nvm_nodejs.sh
 
 #   3. neovim
-./neovim_docker.sh
+./neovim.sh
 
 #   4. Other files
 #     4.1. dotfiles
