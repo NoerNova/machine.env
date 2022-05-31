@@ -60,7 +60,7 @@ echo "### Colorls installing ... ####"
 echo ""
 
 sudo pacman -Sy bc
-sudo gem install colorls
+gem install colorls
 
 # copy dotfiles
 [ -f $HOME/.zshrc ] && rm -r $HOME/.zshrc
