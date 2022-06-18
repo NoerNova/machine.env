@@ -89,7 +89,7 @@ cp -r nvim ~/.config/
 nvim +PlugInstall +qa
 
 # exlint and prettier for neovim
-gnome-terminal -- npm i -g eslint_d prettier
+# gnome-terminal -- npm i -g eslint_d prettier
 
 # Clean temps
 sudo rm -rf $SETUPTEMP

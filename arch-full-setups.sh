@@ -99,6 +99,8 @@ sudo pacman -Sy bat
 echo ""
 echo "Finish setups, happy hacking..."
 
+echo "to install eslint and prettier: npm i -g eslint_d prettier"
+
 # -------------------------------------------------------------------------------------
 
 # // drop down terminal

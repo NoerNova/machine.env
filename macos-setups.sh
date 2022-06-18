@@ -95,5 +95,7 @@ brew install bats
 
 echo " "
 echo "Setups done, happy hacking..."
+echo "to install eslint and prettier: npm i -g eslint_d prettier"
+
 
 # -------------------------------------------------------------------------------------
