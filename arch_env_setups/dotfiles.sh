@@ -25,6 +25,7 @@ echo ""
 
 cp $SETUPDIR/../dotfiles/.bash_aliases $HOME/
 cp $SETUPDIR/../dotfiles/.p10k.zsh $HOME/
+cp $SETUPDIR/../dotfiles/.projectman $HOME/
 
 echo "Dotfiles are copied."
 
