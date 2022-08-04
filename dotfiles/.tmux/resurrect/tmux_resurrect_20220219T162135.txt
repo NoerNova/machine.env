@@ -1,5 +1,0 @@
-pane	webdev	1	1	:*	1	:/Users/noernova	0	zsh	:-zsh
-pane	webdev	1	1	:*	2	:/Users/noernova	0	zsh	:-zsh
-pane	webdev	1	1	:*	3	:/Users/noernova	1	zsh	:-zsh
-window	webdev	1	:zsh	1	:*	85e0,212x54,0,0{58x54,0,0[58x27,0,0,0,58x26,0,28,2],153x54,59,0,1}	:
-state	webdev	

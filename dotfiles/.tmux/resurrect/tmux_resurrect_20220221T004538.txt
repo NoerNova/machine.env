@@ -1,6 +1,0 @@
-pane	shannewsapps	1	1	:*	1	:/Users/noernova/Desktop/SHAN/MobileApp/ShannewsApp	0	zsh	:-zsh
-pane	shannewsapps	1	1	:*	2	:/Users/noernova/Desktop/SHAN/MobileApp/ShannewsApp	0	zsh	:-zsh
-pane	shannewsapps	1	1	:*	3	:/Users/noernova/Desktop/SHAN/MobileApp/ShannewsApp	1	nvim	:nvim
--zsh
-window	shannewsapps	1	:nvim	1	:*	85e9,212x54,0,0{58x54,0,0[58x27,0,0,1,58x26,0,28,2],153x54,59,0,3}	:
-state	shannewsapps	
