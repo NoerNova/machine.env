@@ -1,6 +1,6 @@
 " Fundamentals "{{{
 " ---------------------------------------------------------------------
-"
+
 " init autocmd
 autocmd!
 " set script encoding
@@ -19,12 +19,12 @@ set background=dark
 set nobackup
 set hlsearch
 set showcmd
-set cmdheight=2
+set cmdheight=1
 set laststatus=2
 set scrolloff=10
 set expandtab
-let loaded_matchparen = 1
-set shell=zsh
+"let loaded_matchparen = 1
+set shell=fish
 set backupskip=/tmp/*,/private/tmp/*
 
 " incremental substitution (neovim)
@@ -98,10 +98,13 @@ au BufNewFile,BufRead *.es6 setf javascript
 au BufNewFile,BufRead *.tsx setf typescriptreact
 " Markdown
 au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.mdx set filetype=markdown
 " Flow
 au BufNewFile,BufRead *.flow set filetype=javascript
+" Fish
+au BufNewFile,BufRead *.fish set filetype=fish
 
-" set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
+set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
 
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
@@ -119,6 +122,9 @@ if has("unix")
     runtime ./macos.vim
   endif
 endif
+if has('win32')
+  runtime ./windows.vim
+endif
 
 runtime ./maps.vim
 "}}}
@@ -134,15 +140,13 @@ if exists("&termguicolors") && exists("&winblend")
   set wildoptions=pum
   set pumblend=5
   set background=dark
-"  " Use NeoSolarized
-"  let g:neosolarized_termtrans=1
-"  runtime ./colors/NeoSolarized.vim
-"  colorscheme NeoSolarized
+  " Use NeoSolarized
+  let g:neosolarized_termtrans=1
+  runtime ./colors/NeoSolarized.vim
+  " colorscheme NeoSolarized
   colorscheme tokyonight
+  " colorscheme nord
 endif
-
-hi! Normal ctermbg=NONE guibg=NONE
-hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 
 "}}}
 
