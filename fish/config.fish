@@ -18,6 +18,9 @@ alias cls "clear"
 alias g git
 command -qv nvim && alias vim nvim
 
+# vim key binding
+fish_vi_key_bindings
+
 set -gx EDITOR nvim
 
 set -gx PATH bin $PATH
