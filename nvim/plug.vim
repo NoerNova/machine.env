@@ -8,6 +8,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+Plug 'Yggdroot/indentLine'
 
 if has("nvim")
   Plug 'hoob3rt/lualine.nvim'
@@ -31,9 +32,11 @@ if has("nvim")
   Plug 'windwp/nvim-autopairs'
   Plug 'windwp/nvim-ts-autotag'
   Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+  Plug 'norcalli/nvim-colorizer.lua',
   Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

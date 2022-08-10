@@ -143,8 +143,8 @@ if exists("&termguicolors") && exists("&winblend")
   " Use NeoSolarized
   let g:neosolarized_termtrans=1
   runtime ./colors/NeoSolarized.vim
-  " colorscheme NeoSolarized
-  colorscheme tokyonight
+  colorscheme NeoSolarized
+  " colorscheme tokyonight
   " colorscheme nord
 endif
 
