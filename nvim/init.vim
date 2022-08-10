@@ -141,10 +141,13 @@ if exists("&termguicolors") && exists("&winblend")
   set pumblend=5
   set background=dark
   " Use NeoSolarized
-  let g:neosolarized_termtrans=1
-  runtime ./colors/NeoSolarized.vim
-  colorscheme NeoSolarized
-  " colorscheme tokyonight
+  " let g:neosolarized_termtrans=1
+  " runtime ./colors/NeoSolarized.vim
+  " colorscheme NeoSolarized
+  let g:tokyonight_style = 'storm' " available: night, storm  
+  let g:tokyonight_enable_italic = 1
+  colorscheme tokyonight
+  runtime ./colors/tokyonight.vim
   " colorscheme nord
 endif
 
