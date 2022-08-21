@@ -9,6 +9,10 @@ Plug 'tpope/vim-rhubarb'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
+Plug 'whatyouhide/vim-gotham'
+Plug 'EdenEast/nightfox.nvim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 if has("nvim")
   Plug 'hoob3rt/lualine.nvim'

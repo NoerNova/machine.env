@@ -54,6 +54,7 @@ set tabstop=2
 set ai "Auto indent
 set si "Smart indent
 set nowrap "No Wrap lines
+set relativenumber
 set backspace=start,eol,indent
 " Finding files - Search down into subfolders
 set path+=**
@@ -140,15 +141,26 @@ if exists("&termguicolors") && exists("&winblend")
   set wildoptions=pum
   set pumblend=5
   set background=dark
-  " Use NeoSolarized
+  
+  """"" Use NeoSolarized
   " let g:neosolarized_termtrans=1
   " runtime ./colors/NeoSolarized.vim
   " colorscheme NeoSolarized
-  let g:tokyonight_style = 'storm' " available: night, storm  
-  let g:tokyonight_enable_italic = 1
-  colorscheme tokyonight
-  runtime ./colors/tokyonight.vim
+
+  """"" Use Tokyonight
+  " let g:tokyonight_style = 'storm' " available: night, storm  
+  " let g:tokyonight_enable_italic = 1
+  " colorscheme tokyonight
+  " runtime ./colors/tokyonight.vim
   " colorscheme nord
+  " runtime ./colors/nord.vim
+
+  """"" Use Gotham
+  " colorscheme gotham
+
+  """"" Use nightfox
+  runtime ./colors/nightfox.lua
+  colorscheme terafox
 endif
 
 "}}}

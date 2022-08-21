@@ -21,10 +21,10 @@ let g:colors_name = 'tokyonight'
 " Configuration: {{{
 let s:configuration = {}
 let s:configuration.style = get(g:, 'tokyonight_style', 'night')
-let s:configuration.transparent_background = get(g:, 'tokyonight_transparent_background', 1)
+let s:configuration.transparent_background = get(g:, 'tokyonight_transparent_background', 0)
 let s:configuration.menu_selection_background = get(g:, 'tokyonight_menu_selection_background', 'green')
-let s:configuration.disable_italic_comment = get(g:, 'tokyonight_disable_italic_comment', 1)
-let s:configuration.enable_italic = get(g:, 'tokyonight_enable_italic', 1)
+let s:configuration.disable_italic_comment = get(g:, 'tokyonight_disable_italic_comment', 0)
+let s:configuration.enable_italic = get(g:, 'tokyonight_enable_italic', 0)
 let s:configuration.cursor = get(g:, 'tokyonight_cursor', 'auto')
 let s:configuration.current_word = get(g:, 'tokyonight_current_word', get(g:, 'tokyonight_transparent_background', 0) == 0 ? 'grey background' : 'bold')
 " }}}
