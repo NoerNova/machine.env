@@ -13,6 +13,7 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'Luxed/ayu-vim'
 
 if has("nvim")
   Plug 'hoob3rt/lualine.nvim'
@@ -27,7 +28,6 @@ if has("nvim")
   Plug 'hrsh7th/cmp-nvim-lsp'
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/nvim-cmp'
-  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'onsails/lspkind-nvim'
   Plug 'nvim-lua/popup.nvim'
@@ -41,6 +41,7 @@ if has("nvim")
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
@@ -48,3 +49,6 @@ Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
 call plug#end()
 
+let g:vim_json_conceal = 0
+let g:indentLine_concealcursor = 'nc'
+let g:indentLine_conceallevel = 2

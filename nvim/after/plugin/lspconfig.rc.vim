@@ -139,6 +139,7 @@ nvim_lsp.diagnosticls.setup {
       typescript = 'prettier',
       typescriptreact = 'prettier',
       json = 'prettier',
+      html = 'prettier'
     }
   }
 }

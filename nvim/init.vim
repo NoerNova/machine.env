@@ -152,16 +152,25 @@ if exists("&termguicolors") && exists("&winblend")
   " let g:tokyonight_enable_italic = 1
   " colorscheme tokyonight
   " runtime ./colors/tokyonight.vim
+
   " colorscheme nord
   " runtime ./colors/nord.vim
 
   """"" Use Gotham
-  " colorscheme gotham
+  colorscheme gotham
 
   """"" Use nightfox
-  runtime ./colors/nightfox.lua
-  colorscheme terafox
-endif
+  " runtime ./colors/nightfox.lua
+  " colorscheme terafox
+
+  """"" Use Ayu
+  " let ayucolor="light"  " for light version of theme
+  set background=dark
+  " let g:ayucolor="mirage" " for mirage version of theme
+  let g:ayucolor="dark"   " for dark version of theme
+  " runtime ./colors/ayu.vim
+  colorscheme ayu
+ endif
 
 "}}}
 

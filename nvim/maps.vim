@@ -63,6 +63,7 @@ nmap <C-w><down> <C-w>-
 "  toggle NerdTree
 "-- NERDTree CONFIG
 nnoremap <C-n>t :NERDTreeToggle<CR>
+map nt <C-n>t
 let NERDTreeShowHidden=1
 let NERDTreeRespectWildIgnore=1
 set wildignore+=*.DS_Store,*.min.*
