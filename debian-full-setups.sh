@@ -3,17 +3,23 @@ set -e
 
 # Debian Setups
 # Author noernova
-# Date: Jul 25, 2021
+# Date: Jan 5, 2023
 # Contact noernova.com
 # Github https://github.com/noernova
 # ===================================================================================
 
 # List of Content
 #   1. Wireless Driver
+###   2. Terminal setups
+###     2.1. Zsh
+###     2.2. Prezto (https://github.com/sorin-ionescu/prezto)
+###     2.3. Colorls (https://github.com/athityakumar/colorls)
 #   2. Terminal setups
-#     2.1. Zsh
-#     2.2. Prezto (https://github.com/sorin-ionescu/prezto)
-#     2.3. Colorls (https://github.com/athityakumar/colorls)
+#       2.1. fish
+#       2.2. fisher
+#       2.3. tide
+#       2.4. z
+#       2.5. exa
 #   3. nvm & nodejs
 #     3.1. nvm
 #     3.2. nodejs
@@ -61,7 +67,10 @@ cd $SETUPDIR
 ./rtl88x2bu_driver.sh
 
 #   2. Terminal setups
-./zsh_setups.sh
+# ./zsh_setups.sh
+
+#   2. Terminal setups
+./fish_setups.sh
 
 #   3. nvm & nodejs
 ./nvm_nodejs.sh
@@ -72,6 +81,7 @@ cd $SETUPDIR
 #   5. Other files
 #     5.1. dotfiles
 ./dotfiles.sh
+
 #     5.2. fonts
 ./fonts.sh
 
