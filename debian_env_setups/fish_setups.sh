@@ -38,29 +38,17 @@ echo ""
 echo "### Fish installing ... ###"
 echo ""
 
-sudo apt install fish --yes
+sudo apt install fish gnome-terminal --yes
 
 sudo chsh -s $(which fish)
-
-fish
-
-# fisher plugin
-curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-
-# tide plugin
-fisher install IlanCosman/tide@v5
-
-# exa
-sudo apt install exa --yes
-
-# z
-fisher install jethrokuan/z
 
 # copy dotfiles
 [ -f $HOME/.config/fish ] && rm -rf $HOME/.config/fish
 cp -r $SETUPDIR/../fish $HOME/.config
 
+# fisher plugin
 cd $SETUPDIR
+gnome-terminal -- fish $SETUPDIR/fisher_plugins.sh
 
 # Clean temps
 sudo rm -rf $SETUPTEMP
