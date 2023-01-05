@@ -24,6 +24,9 @@ sudo cp ../fonts/MesloLGS/*.ttf /Library/Fonts
 # Cascadia-Code
 sudo cp ../fonts/CascadiaCode/*.ttf /Library/Fonts
 
+#FatasqueSansMono
+sudo cp ../fonts/FatasqueSansMono/*.otf /Library/Fonts
+
 echo ""
 echo "Fonts are copied."
 echo ""
