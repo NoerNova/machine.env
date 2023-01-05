@@ -34,8 +34,9 @@ sudo cp $SETUPDIR/../fonts/MesloLGS/*.ttf /usr/share/fonts/truetype/MesloLGS
 [ ! -d $FONTSDIR/CascadiaCode ] && sudo mkdir $FONTSDIR/CascadiaCode
 sudo cp $SETUPDIR/../fonts/CascadiaCode/*.ttf $FONTSDIR/CascadiaCode
 
+FONTSDIR=/usr/share/fonts/opentype
 # Fantasque Sans Mono
-[ ! -d $FONTSDIR/FantasqueSansMono] %% sudo mkdir $FONTSDIR/FantasqueSansMono
+[ ! -d $FONTSDIR/FantasqueSansMono ] && sudo mkdir $FONTSDIR/FantasqueSansMono
 sudo cp $SETUPDIR/../fonts/FantasqueSansMono/*.otf $FONTSDIR/FantasqueSansMono
 
 echo ""

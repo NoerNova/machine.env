@@ -64,10 +64,10 @@ SETUPTEMP=$SETUPDIR/temp
 cd $SETUPDIR
 
 #   1. Wireless Driver
-##./rtl88x2bu_driver.sh
+./rtl88x2bu_driver.sh
 
-#   2. Terminal setups
-# ./zsh_setups.sh
+###   2. Terminal setups
+### ./zsh_setups.sh
 
 #   2. Terminal setups
 ./fish_setups.sh
