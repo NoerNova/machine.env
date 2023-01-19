@@ -44,6 +44,9 @@ function __check_rvm --on-variable PWD --description 'Do nvm stuff'
   end
 end
 
+set -x NVM_DIR ~/.nvm
+nvm use default --silent
+
 switch (uname)
   case Darwin
     source (dirname (status --current-filename))/config-osx.fish
@@ -61,3 +64,7 @@ end
 fish_add_path $HOME/.tmux/scripts/
 
 source ~/.bash_aliases
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+status is-interactive && eval /usr/local/Caskroom/miniconda/base/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
