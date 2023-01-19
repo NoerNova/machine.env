@@ -7,13 +7,18 @@ call plug#begin()
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'preservim/nerdtree'
-Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
-Plug 'whatyouhide/vim-gotham'
-Plug 'EdenEast/nightfox.nvim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+
+"" themes
+Plug 'olivercederborg/poimandres.nvim'
 Plug 'Luxed/ayu-vim'
+Plug 'whatyouhide/vim-gotham'
+Plug 'EdenEast/nightfox.nvim'
+
+"" icons
+Plug 'ryanoasis/vim-devicons'
 
 if has("nvim")
   Plug 'hoob3rt/lualine.nvim'
@@ -39,7 +44,7 @@ if has("nvim")
   Plug 'norcalli/nvim-colorizer.lua',
   Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+  \ 'for': [ 'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html', 'python', 'python3'] }
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 endif
@@ -48,7 +53,3 @@ Plug 'groenewege/vim-less', { 'for': 'less' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
 call plug#end()
-
-let g:vim_json_conceal = 0
-let g:indentLine_concealcursor = 'nc'
-let g:indentLine_conceallevel = 2

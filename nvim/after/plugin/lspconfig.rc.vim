@@ -68,7 +68,8 @@ end
 
 
 -- Set up completion using nvim_cmp with LSP source
-local capabilities = require('cmp_nvim_lsp').update_capabilities(
+-- local capabilities  require(cmp_nvim_lsp).update_capabilities(
+local capabilities = require('cmp_nvim_lsp').default_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
@@ -83,9 +84,16 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.jedi_language_server.setup {
+  cmd = { "jedi-language-server" },
+  filetypes = { "python" },
+  capabilities = capabilities,
+  single_file_support = true
+}
+
 nvim_lsp.diagnosticls.setup {
   on_attach = on_attach,
-  filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'pandoc' },
+  filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'pandoc', 'python3' },
   init_options = {
     linters = {
       eslint = {
@@ -114,6 +122,7 @@ nvim_lsp.diagnosticls.setup {
       javascriptreact = 'eslint',
       typescript = 'eslint',
       typescriptreact = 'eslint',
+      python3 = 'eslint'
     },
     formatters = {
       eslint_d = {
@@ -139,7 +148,8 @@ nvim_lsp.diagnosticls.setup {
       typescript = 'prettier',
       typescriptreact = 'prettier',
       json = 'prettier',
-      html = 'prettier'
+      html = 'prettier',
+      python3 = 'prettier'
     }
   }
 }

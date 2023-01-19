@@ -157,7 +157,7 @@ if exists("&termguicolors") && exists("&winblend")
   " runtime ./colors/nord.vim
 
   """"" Use Gotham
-  colorscheme gotham
+  "" colorscheme gotham
 
   """"" Use nightfox
   " runtime ./colors/nightfox.lua
@@ -170,6 +170,10 @@ if exists("&termguicolors") && exists("&winblend")
   let g:ayucolor="dark"   " for dark version of theme
   " runtime ./colors/ayu.vim
   colorscheme ayu
+
+  """"" Use Poimandres
+  " runtime ./colors/poimandres.lua
+  " colorscheme poimandres
  endif
 
 "}}}
@@ -177,3 +181,6 @@ if exists("&termguicolors") && exists("&winblend")
 " Extras "{{{
 " ---------------------------------------------------------------------
 " vim: set foldmethod=marker foldlevel=0:
+let g:vim_json_conceal = 0
+let g:indentLine_concealcursor = 'nc'
+let g:indentLine_conceallevel = 2
