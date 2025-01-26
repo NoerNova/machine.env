@@ -3,7 +3,7 @@ $ErrorActionPreference = 'Continue'
 
 # Windows Setups
 # Author noernova
-# Date: Dec 13, 2021
+# Date: Jan 27, 2025
 # Contact noernova.com
 # Github https://github.com/noernova
 # ===================================================================================
@@ -28,18 +28,18 @@ $ErrorActionPreference = 'Continue'
 
 # 0. Greeting #
 ###############
-echo ""
-echo ""
-echo "###################"
-echo "### HELLO WORLD ###"
-echo "###################"
-echo ""
-echo ""
+Write-Output ""
+Write-Output ""
+Write-Output "###################"
+Write-Output "### HELLO WORLD ###"
+Write-Output "###################"
+Write-Output ""
+Write-Output ""
 
 # ------------------------------------------------------------------------------------
 
 # SETUP Folder
-cd windows_env_setups
+Set-Location windows_env_setups
 
 # 	1. Initial setups, Scoop, Git
 ./initial_setups.ps1
@@ -53,7 +53,7 @@ cd windows_env_setups
 # 	7. nvm
 ./nvm_nodejs.ps1
 
-echo " "
-echo "Setups done, happy hacking..."
+Write-Output " "
+Write-Output "Setups done, happy hacking..."
 
 # -------------------------------------------------------------------------------------
