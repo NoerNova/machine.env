@@ -1,3 +1,10 @@
+# PowerShell User Profile
+# Author: noernova
+# Date: Jan 27, 2025 
+# Contact: noernova.com
+# Github: https://github.com/noernova
+# ===========================================================================
+#
 Import-Module posh-git
 Import-Module oh-my-posh
 $omp_config = Join-Path $PSScriptRoot ".\config.omp.json"

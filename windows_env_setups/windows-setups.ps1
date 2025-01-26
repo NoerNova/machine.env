@@ -1,6 +1,6 @@
 # Windows Setups
 # Author noernova
-# Date: Dec 13, 2021
+# Date: Jan 27, 2025
 # Contact noernova.com
 # Github https://github.com/noernova
 # ===================================================================================
@@ -23,7 +23,7 @@
 # ====================================================================================
 
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
-iwr -useb get.scoop.sh | iex
+Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
 
 scoop install curl sudo jq
 
@@ -34,19 +34,19 @@ winget install -e --id Git.Git
 scoop install neovim gcc
 
 # vim-plug
-iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
-    ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
+Invoke-WebRequest -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+    New-Item "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
 
 # copy nvim setupfile
-cp -R nvim ~\AppData\Local
+Copy-Item -R nvim ~\AppData\Local
 
 # copy setup files
 $CONFIG_DIR = '~\.config\powershell'
 if ((Test-Path -Path $CONFIG_DIR) -eq $false) {
 	mkdir ~\.config\powershell
 }
-cp config_files\config.omp.json $CONFIG_DIR
-cp config_files\user_profile.ps1 $CONFIG_DIR
+Copy-Item config_files\config.omp.json $CONFIG_DIR
+Copy-Item config_files\user_profile.ps1 $CONFIG_DIR
 
 # Powershell config file
 $PFOLDER = '~\Documents\PowerShell'
@@ -54,7 +54,7 @@ if ((Test-Path -Path $PFOLDER) -eq $false) {
 	mkdir ~\Documents\PowerShell
 }
 
-echo '. $env:USERPROFILE\.config\powershell\user_profile.ps1' >> $PROFILE.CurrentUserCurrentHost
+Write-Output '. $env:USERPROFILE\.config\powershell\user_profile.ps1' >> $PROFILE.CurrentUserCurrentHost
 
 # Oh-My-Posh
 Install-Module posh-git -Scope CurrentUser -Force
@@ -79,6 +79,6 @@ Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -Skip
 scoop install fzf
 Install-Module -Name PSFzf -Scope CurrentUser -Force
 
-# echo finished
-echo "Finished > checkout omp cool themes https://ohmyposh.dev/docs/themes"
-echo "Perform nvm install lastest after restart powershell with admin privileges"
+# Write-Output finished
+Write-Output "Finished > checkout omp cool themes https://ohmyposh.dev/docs/themes"
+Write-Output "Perform nvm install lastest after restart powershell with admin privileges"

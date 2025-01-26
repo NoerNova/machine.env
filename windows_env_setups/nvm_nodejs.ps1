@@ -1,23 +1,23 @@
 # NVM and NODEJS
 # Author: noernova
-# Date: Dec 13, 2021
+# Date: Jan 27, 2025
 # Contact: noernova.com
 # Github: https://github.com/noernova
 # ===========================================================================
 
-echo ""
-echo ""
-echo "######################"
-echo "### NVM && NODEJS ####"
-echo "######################"
-echo ""
+Write-Output ""
+Write-Output ""
+Write-Output "######################"
+Write-Output "### NVM && NODEJS ####"
+Write-Output "######################"
+Write-Output ""
 
 # nvm
 scoop install nvm
 
-echo ""
-echo ""
-echo ""
-echo "nvm install lastest (or node version) >> after restart powershell with admin privileges"
-echo ""
-echo ""
+Write-Output ""
+Write-Output ""
+Write-Output ""
+Write-Output "nvm install lastest (or node version) >> after restart powershell with admin privileges"
+Write-Output ""
+Write-Output ""

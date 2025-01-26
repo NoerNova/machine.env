@@ -1,23 +1,23 @@
 # PowerShell oh-my-posh
 # Author: noernova
-# Date: Dec 13, 2021 
+# Date: Jan 27, 2025
 # Contact: noernova.com
 # Github: https://github.com/noernova
 # ===========================================================================
 
-echo ""
-echo "#######################"
-echo "###### PowerShell #####"
-echo "#######################"
-echo ""
+Write-Output ""
+Write-Output "#######################"
+Write-Output "###### PowerShell #####"
+Write-Output "#######################"
+Write-Output ""
 
 # copy setup files
 $CONFIG_DIR = '~\.config\powershell'
 if ((Test-Path -Path $CONFIG_DIR) -eq $false) {
 	mkdir ~\.config\powershell
 }
-cp config_files\config.omp.json $CONFIG_DIR
-cp config_files\user_profile.ps1 $CONFIG_DIR
+Copy-Item config_files\config.omp.json $CONFIG_DIR
+Copy-Item config_files\user_profile.ps1 $CONFIG_DIR
 
 # Powershell config file
 $PFOLDER = '~\Documents\PowerShell'
@@ -26,7 +26,7 @@ if ((Test-Path -Path $PFOLDER) -eq $false) {
 }
 
 # Load the config file
-echo '. $env:USERPROFILE\.config\powershell\user_profile.ps1' >> $PROFILE.CurrentUserCurrentHost
+Write-Output '. $env:USERPROFILE\.config\powershell\user_profile.ps1' >> $PROFILE.CurrentUserCurrentHost
 
 # Oh-My-Posh
 Install-Module posh-git -Scope CurrentUser -Force

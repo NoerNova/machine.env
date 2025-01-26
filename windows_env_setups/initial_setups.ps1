@@ -1,6 +1,6 @@
 # initial Windows setup
 # Author: noernova
-# Date: Dev 13, 2021 
+# Date: Jan 27, 2025 
 # Contact: noernova.com
 # Github: https://github.com/noernova
 # ===========================================================================
@@ -9,7 +9,7 @@
 $ErrorActionPreference = 'Continue'
 
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
-iwr -useb get.scoop.sh | iex
+Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
 
 scoop install curl sudo jq
 
