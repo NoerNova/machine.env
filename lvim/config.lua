@@ -10,7 +10,7 @@ lvim.transparent_window = true
 lvim.builtin.lualine.style = "lvim"
 lvim.builtin.nvimtree.setup.filters = {
   dotfiles = false,
-  custom = { '.git', 'node_modules', '.cache', '.DS_Store' },
+  custom = { '.git', '.cache', '.DS_Store' },
 }
 
 -- Plugins
@@ -21,7 +21,7 @@ lvim.plugins = {
       require("nvim-ts-autotag").setup()
     end,
   },
-  { "HiPhish/nvim-ts-rainbow2" },
+  { "hiphish/rainbow-delimiters.nvim" },
   {
     "folke/lsp-colors.nvim",
     event = "BufRead",
@@ -45,8 +45,8 @@ lvim.plugins = {
   { "Luxed/ayu-vim" },
   { "chrisbra/colorizer" },
   { "Exafunction/codeium.vim" },
-  { "catppuccin/nvim",         name = "catppuccin", priority = 1000 },
-  { "whatyouhide/vim-gotham" }
+  { "catppuccin/nvim",                name = "catppuccin", priority = 1000 },
+  { "whatyouhide/vim-gotham" },
 }
 
 require("lvim.lsp.manager").setup("cssls", {
@@ -71,6 +71,15 @@ require("lvim.lsp.manager").setup("cssls", {
     },
   },
 })
+
+require("lvim.lsp.null-ls.formatters").setup(
+  {
+    {
+      command = "prettierd",
+      filetypes = { "typescript", "typescriptreact" },
+    },
+  }
+)
 
 -- Post plugins
 lvim.builtin.treesitter.rainbow.enable = true
