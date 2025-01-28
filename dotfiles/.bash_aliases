@@ -16,17 +16,27 @@ alias python="python3"
 alias trans="~/.config/trans"
 alias opengit="open https://github.com/noernova"
 
+alias yt-dl2="python3 -m youtube_dl -f mp4 --verbose -x --user-agent 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6533.103 Mobile Safari/537.36' $argv"
+
 alias openshannews="open https://shannews.org && 
                     open https://burmese.shannews.org &&
                     open https://english.shannews.org &&
                     open https://radio.shannews.org &&
                     open https://building.shannews.org"
 
+alias loginshannews="open https://shannews.org/login-with-shansecurity2024 &&
+                    open https://burmese.shannews.org/login-with-shansecurity2024 &&
+                    open https://english.shannews.org/login-with-shansecurity2024 &&
+                    open https://radio.shannews.org/login-with-shansecurity2024 &&
+                    open https://building.shannews.org/login-with-shansecurity2024"
+
 alias shantraffic="open 'https://shannews.org/wp-admin/admin.php?page=WordfenceTools&subpage=livetraffic' &&
                   open 'https://burmese.shannews.org/wp-admin/admin.php?page=WordfenceTools&subpage=livetraffic' &&
                   open 'https://english.shannews.org/wp-admin/admin.php?page=WordfenceTools&subpage=livetraffic' &&
                   open 'https://radio.shannews.org/wp-admin/admin.php?page=WordfenceTools&subpage=livetraffic' &&
                   open 'https://building.shannews.org/wp-admin/admin.php?page=WordfenceTools&subpage=livetraffic'"
+
+alias sshshannews="ssh -i /Users/noernova/Desktop/SHAN/Security/SecurityKey/2021/shannews-ssh-key shannews@128.199.168.231"
 
 ### function zone ###
 #####################
