@@ -78,10 +78,19 @@ nvim_lsp.flow.setup {
   capabilities = capabilities
 }
 
-nvim_lsp.tsserver.setup {
+-- nvim_lsp.tsserver.setup {
+--   on_attach = on_attach,
+--   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+--   capabilities = capabilities
+-- }
+
+local util = require "lspconfig.util"
+nvim_lsp.ts_ls.setup {
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-  capabilities = capabilities
+  capabilities = capabilities,
+  cmd = { "typescript-language-server", "--stdio" },
+  filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+  root_dir = util.root_pattern("tsconfig.json", "jsconfig.json", "package.json", ".git")
 }
 
 nvim_lsp.jedi_language_server.setup {
@@ -93,10 +102,10 @@ nvim_lsp.jedi_language_server.setup {
 
 nvim_lsp.diagnosticls.setup {
   on_attach = on_attach,
-  filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'pandoc', 'python3' },
+  filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'pandoc', 'python3', 'typescript.tsx' },
   init_options = {
     linters = {
-      eslint = {
+      eslint_d = {
         command = 'eslint_d',
         rootPatterns = { '.git' },
         debounce = 100,
@@ -108,7 +117,7 @@ nvim_lsp.diagnosticls.setup {
           column = 'column',
           endLine = 'endLine',
           endColumn = 'endColumn',
-          message = '[eslint] ${message} [${ruleId}]',
+          message = '[eslint_d] ${message} [${ruleId}]',
           security = 'severity'
         },
         securities = {
@@ -118,11 +127,11 @@ nvim_lsp.diagnosticls.setup {
       },
     },
     filetypes = {
-      javascript = 'eslint',
-      javascriptreact = 'eslint',
-      typescript = 'eslint',
-      typescriptreact = 'eslint',
-      python3 = 'eslint'
+      javascript = 'eslint_d',
+      javascriptreact = 'eslint_d',
+      typescript = 'eslint_d',
+      typescriptreact = 'eslint_d',
+      python3 = 'eslint_d'
     },
     formatters = {
       eslint_d = {
@@ -131,25 +140,25 @@ nvim_lsp.diagnosticls.setup {
         args = { '--stdin', '--stdin-filename', '%filename', '--fix-to-stdout' },
         rootPatterns = { '.git' },
       },
-      prettier = {
-        command = 'prettier_d_slim',
+      prettierd = {
+        command = 'prettierd',
         rootPatterns = { '.git' },
-        -- requiredFiles: { 'prettier.config.js' },
+        -- requiredFiles: { 'prettierd.config.js' },
         args = { '--stdin', '--stdin-filepath', '%filename' }
       }
     },
     formatFiletypes = {
-      css = 'prettier',
-      javascript = 'prettier',
-      javascriptreact = 'prettier',
-      json = 'prettier',
-      scss = 'prettier',
-      less = 'prettier',
-      typescript = 'prettier',
-      typescriptreact = 'prettier',
-      json = 'prettier',
-      html = 'prettier',
-      python3 = 'prettier'
+      css = 'prettierd',
+      javascript = 'prettierd',
+      javascriptreact = 'prettierd',
+      json = 'prettierd',
+      scss = 'prettierd',
+      less = 'prettierd',
+      typescript = 'prettierd',
+      typescriptreact = 'prettierd',
+      json = 'prettierd',
+      html = 'prettierd',
+      python3 = 'prettierd'
     }
   }
 }
@@ -165,5 +174,40 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     }
   }
 )
+
+-- prettier
+local status, null_ls = pcall(require, "null-ls")
+if (not status) then return end
+
+null_ls.setup({
+  on_attach = on_attach,
+  source = {
+    null_ls.builtins.diagnostic.eslint_d.with({
+      diagnostics_format = '[eslint_d] #{m}\n(#{c})'
+    }),
+      null_ls.builtins.diagnostics.fish
+  }
+})
+
+local status, prettier = pcall(require, "prettier")
+if (not status) then return end
+
+prettier.setup({
+  on_attach = on_attach,
+  bin = 'pretteird',
+  filetypes = {
+    "css",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "scss",
+    "less",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "html",
+    "python3"
+  }
+})
 
 EOF

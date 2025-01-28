@@ -17,7 +17,6 @@ require'nvim-treesitter.configs'.setup {
     "tsx",
     "toml",
     "fish",
-    "php",
     "json",
     "yaml",
     "swift",
@@ -25,7 +24,8 @@ require'nvim-treesitter.configs'.setup {
     "scss",
     "c",
     "lua",
-    "python"
+    "python",
+    "dart"
   },
   autotag = {
     enable = true,
@@ -33,5 +33,5 @@ require'nvim-treesitter.configs'.setup {
 }
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
+parser_config.tsx.filetype_to_parsername = { "javascript", "javascriptreact", "typescript", "typescript.tsx", "typescriptreact" }
 EOF

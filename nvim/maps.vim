@@ -75,5 +75,3 @@ autocmd BufWinEnter * silent NERDTreeMirror
 
 set exrc
 "}}}
-
-
